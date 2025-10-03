@@ -14,16 +14,19 @@ body {font-family: Arial, sans-serif; line-height:1.6; color:#333;}
 a {text-decoration:none; color:inherit;}
 img {max-width:100%; height:auto; display:block;}
 
-/* PARALLAX BANNER */
+/* RESPONSIVE BANNER */
 .banner-container {
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: 50vh;
     min-height: 250px;
-    background-image: url('http://rentbikehanoi.com/wp-content/uploads/2025/10/cropped-Banner-thue-xe-may.jpeg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.banner-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
 }
 
 /* Menu */
@@ -93,6 +96,7 @@ h2 {color:#ff6600; margin:20px 0 10px 0; text-align:center; opacity:0; transform
   "@id": "http://rentbikehanoi.com",
   "url": "http://rentbikehanoi.com",
   "telephone": "+84334699969",
+  "email": "motorbikenguyenha@gmail.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Alley 5, Nguyen Van Cu St",
@@ -130,8 +134,10 @@ h2 {color:#ff6600; margin:20px 0 10px 0; text-align:center; opacity:0; transform
 </head>
 <body>
 
-<!-- Parallax Banner -->
-<div class="banner-container"></div>
+<!-- Responsive Banner -->
+<div class="banner-container">
+<img src="http://rentbikehanoi.com/wp-content/uploads/2025/10/cropped-Banner-thue-xe-may.jpeg" alt="Nguyen Ha Motorbike Rental">
+</div>
 
 <!-- Menu -->
 <div class="menu">
@@ -171,15 +177,12 @@ h2 {color:#ff6600; margin:20px 0 10px 0; text-align:center; opacity:0; transform
 <div class="contact" id="contact">
 <p>Address: Alley 5, Nguyen Van Cu St, Long Bien Dist, Hanoi, Vietnam</p>
 <p>Phone: +84 33 4699969</p>
-<p>Email: info@rentbikehanoi.com</p>
+<p>Email: <a href="mailto:motorbikenguyenha@gmail.com">motorbikenguyenha@gmail.com</a></p>
 </div>
 
 <script>
-// PARALLAX EFFECT & SCROLL REVEAL
+// Scroll reveal
 window.addEventListener('scroll', function() {
-  const banner = document.querySelector('.banner-container');
-  banner.style.backgroundPosition = 'center ' + window.scrollY * 0.5 + 'px';
-  
   document.querySelectorAll('h1, h2, .content p, .cta-buttons').forEach(el=>{
     const rect = el.getBoundingClientRect();
     if(rect.top < window.innerHeight - 50){
