@@ -10,9 +10,24 @@
 <style>
 /* RESET & BASE */
 * {margin:0;padding:0;box-sizing:border-box;}
-body {font-family: Arial, sans-serif; line-height:1.6; color:#333; background:#fff;}
+body {font-family: Arial, sans-serif; line-height:1.6; color:#333;}
 a {text-decoration:none; color:inherit;}
 img {max-width:100%; height:auto; display:block;}
+
+/* PARALLAX BANNER */
+.banner-container {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+.banner-container img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transform: translateZ(0);
+    will-change: transform;
+    transition: transform 0.3s ease-out;
+}
 
 /* Menu */
 .menu {
@@ -33,26 +48,16 @@ img {max-width:100%; height:auto; display:block;}
 }
 .menu a:hover {color:#ff6600;}
 
-/* Scroll Reveal */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-/* Left-Right reveal */
-.reveal-left { transform: translateX(-50px); }
-.reveal-right { transform: translateX(50px); }
-
-.reveal.active { opacity: 1; transform: translate(0,0); }
+/* Heading */
+h1 {text-align:center; margin:20px 0; font-size:2rem; color:#222; opacity:0; transform:translateY(30px); transition:1s;}
+h2 {color:#ff6600; margin:20px 0 10px 0; text-align:center; opacity:0; transform:translateY(30px); transition:1s;}
 
 /* Content */
 .content {padding:20px; max-width:1200px; margin:0 auto;}
-h1, h2 {text-align:center; margin:20px 0; color:#222;}
-p {margin:10px 0; text-align:justify;}
+.content p {margin:10px 0; text-align:justify; opacity:0; transform:translateY(30px); transition:1s;}
 
 /* Buttons CTA */
-.cta-buttons {text-align:center; margin:20px 0;}
+.cta-buttons {text-align:center; margin:20px 0; opacity:0; transform:translateY(30px); transition:1s;}
 .cta-buttons a {
     display:inline-block;
     margin:5px;
@@ -86,9 +91,10 @@ p {margin:10px 0; text-align:justify;}
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Nguyen Ha Motorbike Rental",
+  "image": "http://rentbikehanoi.com/wp-content/uploads/2025/10/cropped-Banner-thue-xe-may.jpeg",
+  "@id": "http://rentbikehanoi.com",
   "url": "http://rentbikehanoi.com",
   "telephone": "+84334699969",
-  "email": "motorbikenguyenha@gmail.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Alley 5, Nguyen Van Cu St",
@@ -112,6 +118,11 @@ p {margin:10px 0; text-align:justify;}
 </head>
 <body>
 
+<!-- Parallax Banner -->
+<div class="banner-container">
+<img src="http://rentbikehanoi.com/wp-content/uploads/2025/10/cropped-Banner-thue-xe-may.jpeg" alt="Nguyen Ha Motorbike Rental" class="banner">
+</div>
+
 <!-- Menu -->
 <div class="menu">
 <a href="#about">About</a>
@@ -119,55 +130,31 @@ p {margin:10px 0; text-align:justify;}
 <a href="#contact">Contact</a>
 <a href="https://m.facebook.com/motorbikethuha/">Fanpage</a>
 <a href="https://share.google/Vvo8NjM9ExBke9ae8">Local Map</a>
+<a href="http://rentbikehanoi.com">Website</a>
 </div>
 
 <!-- Content -->
 <div class="content" id="about">
-<h1 class="reveal reveal-left">Nguyen Ha Motorbike Rental</h1>
-<p class="reveal reveal-right">Welcome to Nguyen Ha Motorbike Rental, your trusted motorbike rental service in Hanoi. We provide clean, reliable, and well-maintained motorbikes, scooters, and gear bikes for daily, weekly, or monthly hire. Our services are designed for travelers, expats, and locals who want to explore Hanoi and surrounding countryside comfortably and safely. Enjoy free delivery and pickup, flexible booking, and exceptional customer service.</p>
+<h1>Nguyen Ha Motorbike Rental</h1>
+<p>Welcome to Nguyen Ha Motorbike Rental, your trusted motorbike rental service in Hanoi. We provide clean, reliable, and well-maintained motorbikes, scooters, and gear bikes for daily, weekly, or monthly hire. Our services are designed for travelers, expats, and locals who want to explore Hanoi and surrounding countryside comfortably and safely. Enjoy free delivery and pickup, flexible booking, and exceptional customer service.</p>
 
-<h2 class="reveal reveal-left">Why Choose Us?</h2>
-<p class="reveal reveal-right">Nguyen Ha Motorbike Rental stands out for quality, convenience, and affordability. All bikes are regularly serviced and sanitized. Our team is friendly, professional, and ready to help you with navigation tips, routes, and suggestions for your Hanoi adventure. We ensure a seamless rental experience from start to finish.</p>
+<h2>Why Choose Us?</h2>
+<p>Nguyen Ha Motorbike Rental stands out for quality, convenience, and affordability. All bikes are regularly serviced and sanitized. Our team is friendly, professional, and ready to help you with navigation tips, routes, and suggestions for your Hanoi adventure. We ensure a seamless rental experience from start to finish.</p>
 
-<h2 class="reveal reveal-left">Services Offered</h2>
-<p class="reveal reveal-right">
-- Daily, Weekly, Monthly motorbike rentals<br>
+<h2>Services Offered</h2>
+<p>- Daily, Weekly, Monthly motorbike rentals<br>
 - Free delivery & pickup in Hanoi<br>
 - Well-maintained scooters and gear bikes<br>
 - Flexible payment and booking options<br>
-- Travel advice and support for tourists
-</p>
-
-    <h2 class="reveal reveal-right">Frequently Asked Questions</h2>
-<div class="reveal reveal-left">
-<p><strong>Q1: Can I rent a motorbike for a few hours only?</strong><br>
-A1: Yes! We offer flexible hourly, daily, weekly, and monthly rental plans to suit your travel schedule in Hanoi.</p>
-
-<p><strong>Q2: Do you provide helmets and safety gear?</strong><br>
-A2: Absolutely. Every rental includes helmets, safety gear, and basic riding instructions to ensure a safe journey.</p>
-
-<p><strong>Q3: Is there a delivery service?</strong><br>
-A3: Yes, we provide free delivery and pickup within Hanoi for all rentals. Just let us know your preferred location and time.</p>
-
-<p><strong>Q4: How do I book a motorbike?</strong><br>
-A4: You can book easily via <a href="https://wa.me/84334699969">WhatsApp</a>, <a href="https://zalo.me/0334699969">Zalo</a>, or directly through our Fanpage <a href="https://m.facebook.com/motorbikethuha/">here</a>.</p>
-
-<p><strong>Q5: Are the bikes regularly maintained?</strong><br>
-A5: Yes, all our motorbikes are thoroughly inspected and well-maintained to ensure smooth and safe rides. Our maintenance team checks tires, brakes, lights, and engine performance before every rental.</p>
-
-<p><strong>Q6: Can I explore areas outside Hanoi?</strong><br>
-A6: Definitely. Our bikes are suitable for day trips to nearby towns, scenic countryside routes, and northern Vietnam destinations. We can provide route suggestions and travel tips.</p>
-
-<p><strong>Q7: What if I encounter an issue during the rental?</strong><br>
-A7: We provide 24/7 support for any issues. Just contact us via WhatsApp or Zalo, and our team will assist you promptly.</p>
-</div>
+- Travel advice and support for tourists</p>
 
 <!-- CTA Buttons -->
-<div class="cta-buttons reveal reveal-left">
+<div class="cta-buttons">
 <a href="https://wa.me/84334699969">Book Now via WhatsApp</a>
 <a href="https://zalo.me/0334699969">Contact via Zalo</a>
 <a href="https://m.facebook.com/motorbikethuha/">Visit Fanpage</a>
 <a href="https://share.google/Vvo8NjM9ExBke9ae8">View Local Map</a>
+<a href="http://rentbikehanoi.com">Visit Website</a>
 </div>
 
 </div>
@@ -176,28 +163,23 @@ A7: We provide 24/7 support for any issues. Just contact us via WhatsApp or Zalo
 <div class="contact" id="contact">
 <p>Address: Alley 5, Nguyen Van Cu St, Long Bien Dist, Hanoi, Vietnam</p>
 <p>Phone: +84 33 4699969</p>
-<p>Email: <a href="mailto:motorbikenguyenha@gmail.com">motorbikenguyenha@gmail.com</a></p>
-<p>Website: <a href="http://rentbikehanoi.com" target="_blank">rentbikehanoi.com</a></p>
+<p>Email: motorbikenguyenha@gmail.com</p>
 </div>
 
 <script>
-// Scroll reveal logic
-document.addEventListener("DOMContentLoaded", function() {
-  const reveals = document.querySelectorAll('.reveal');
-
-  function revealOnScroll() {
-    const windowHeight = window.innerHeight;
-    reveals.forEach(el => {
-      const elementTop = el.getBoundingClientRect().top;
-      const revealPoint = 50; // khoảng cách trước khi hiện
-      if(elementTop < windowHeight - revealPoint){
-        el.classList.add('active');
-      }
-    });
-  }
-
-  window.addEventListener('scroll', revealOnScroll);
-  revealOnScroll(); // chạy ngay khi load
+// PARALLAX EFFECT
+window.addEventListener('scroll', function() {
+  const banner = document.querySelector('.banner-container img');
+  banner.style.transform = 'translateY(' + window.scrollY * 0.5 + 'px)';
+  
+  // Scroll reveal text
+  document.querySelectorAll('h1, h2, .content p, .cta-buttons').forEach(el=>{
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 50){
+      el.style.opacity = 1;
+      el.style.transform = 'translateY(0)';
+    }
+  });
 });
 </script>
 
