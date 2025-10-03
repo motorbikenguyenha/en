@@ -14,22 +14,22 @@ body {font-family: Arial, sans-serif; line-height:1.6; color:#333;}
 a {text-decoration:none; color:inherit;}
 img {max-width:100%; height:auto; display:block;}
 
-/* RESPONSIVE BANNER */
+/* BANNER RESPONSIVE */
 .banner-container {
     position: relative;
     width: 100%;
-    height: 50vh;
-    min-height: 250px;
     overflow: hidden;
+    height: 400px;
 }
 .banner-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: center top;
+    transition: transform 0.3s ease-out;
 }
 
-/* Menu */
+/* MENU */
 .menu {
     display: flex;
     justify-content: center;
@@ -37,26 +37,26 @@ img {max-width:100%; height:auto; display:block;}
     background-color: #f7f7f7;
     padding: 10px 0;
     position: sticky;
-    top:0;
-    z-index:1000;
+    top: 0;
+    z-index: 1000;
 }
 .menu a {
     margin: 0 15px;
     font-weight:bold;
     color:#333;
-    transition:0.3s;
+    transition: 0.3s;
 }
 .menu a:hover {color:#ff6600;}
 
-/* Heading */
+/* HEADING */
 h1 {text-align:center; margin:20px 0; font-size:2rem; color:#222; opacity:0; transform:translateY(30px); transition:1s;}
-h2 {color:#ff6600; margin:20px 0 10px 0; text-align:center; opacity:0; transform:translateY(30px); transition:1s;}
+h2 {color:#ff6600; margin:20px 0 10px; text-align:center; opacity:0; transform:translateY(30px); transition:1s;}
 
-/* Content */
+/* CONTENT */
 .content {padding:20px; max-width:1200px; margin:0 auto;}
 .content p {margin:10px 0; text-align:justify; opacity:0; transform:translateY(30px); transition:1s;}
 
-/* Buttons CTA */
+/* CTA BUTTONS */
 .cta-buttons {text-align:center; margin:20px 0; opacity:0; transform:translateY(30px); transition:1s;}
 .cta-buttons a {
     display:inline-block;
@@ -70,7 +70,7 @@ h2 {color:#ff6600; margin:20px 0 10px 0; text-align:center; opacity:0; transform
 }
 .cta-buttons a:hover {background-color:#e65c00;}
 
-/* Contact */
+/* CONTACT */
 .contact {
     background-color:#f0f0f0;
     padding:20px;
@@ -78,11 +78,11 @@ h2 {color:#ff6600; margin:20px 0 10px 0; text-align:center; opacity:0; transform
     font-size:16px;
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media(max-width:768px){
     h1 {font-size:1.5rem;}
     .menu a {margin:5px 10px; font-size:14px;}
-    .banner-container {height:40vh;}
+    .banner-container {height:250px;}
 }
 </style>
 
@@ -134,7 +134,7 @@ h2 {color:#ff6600; margin:20px 0 10px 0; text-align:center; opacity:0; transform
 </head>
 <body>
 
-<!-- Responsive Banner -->
+<!-- Banner -->
 <div class="banner-container">
 <img src="http://rentbikehanoi.com/wp-content/uploads/2025/10/cropped-Banner-thue-xe-may.jpeg" alt="Nguyen Ha Motorbike Rental">
 </div>
@@ -163,26 +163,29 @@ h2 {color:#ff6600; margin:20px 0 10px 0; text-align:center; opacity:0; transform
 - Flexible payment and booking options<br>
 - Travel advice and support for tourists</p>
 
-<!-- CTA Buttons -->
+<!-- CTA -->
 <div class="cta-buttons">
 <a href="https://wa.me/84334699969">Book Now via WhatsApp</a>
 <a href="https://zalo.me/0334699969">Contact via Zalo</a>
+<a href="mailto:motorbikenguyenha@gmail.com">Email Us</a>
 <a href="https://m.facebook.com/motorbikethuha/">Visit Fanpage</a>
 <a href="https://share.google/Vvo8NjM9ExBke9ae8">View Local Map</a>
 </div>
-
 </div>
 
 <!-- Contact -->
 <div class="contact" id="contact">
 <p>Address: Alley 5, Nguyen Van Cu St, Long Bien Dist, Hanoi, Vietnam</p>
 <p>Phone: +84 33 4699969</p>
-<p>Email: <a href="mailto:motorbikenguyenha@gmail.com">motorbikenguyenha@gmail.com</a></p>
+<p>Email: motorbikenguyenha@gmail.com</p>
 </div>
 
 <script>
-// Scroll reveal
+// PARALLAX & SCROLL REVEAL
 window.addEventListener('scroll', function() {
+  const banner = document.querySelector('.banner-container img');
+  banner.style.transform = 'translateY(' + window.scrollY * 0.4 + 'px)';
+
   document.querySelectorAll('h1, h2, .content p, .cta-buttons').forEach(el=>{
     const rect = el.getBoundingClientRect();
     if(rect.top < window.innerHeight - 50){
@@ -191,7 +194,4 @@ window.addEventListener('scroll', function() {
     }
   });
 });
-</script>
-
-</body>
-</html>
+</script
