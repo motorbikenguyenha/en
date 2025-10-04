@@ -178,42 +178,4 @@ window.addEventListener('scroll', function() {
 </body>
 </html>
 
-<!-- Banner Responsive -->
-<div class="banner-container">
-  <div class="banner-image"></div>
-</div>
 
-<style>
-/* Banner Responsive với trọng tâm trung tâm */
-.banner-container {
-  width: 100%;
-  height: 400px; /* Chiều cao desktop */
-  overflow: hidden;
-  position: relative;
-}
-
-.banner-image {
-  width: 100%;
-  height: 100%;
-  background-image: url('http://rentbikehanoi.com/wp-content/uploads/2025/10/cropped-Banner-thue-xe-may.jpeg');
-  background-position: center center; /* Giữ trọng tâm chính giữa */
-  background-size: cover; /* Tự động co dãn theo khung */
-  background-repeat: no-repeat;
-  transition: transform 0.3s ease-out;
-}
-
-/* Hiệu ứng parallax khi scroll */
-window.addEventListener('scroll', function() {
-  const banner = document.querySelector('.banner-image');
-  banner.style.transform = 'translateY(' + window.scrollY * 0.5 + 'px)';
-});
-
-/* Mobile & tablet */
-@media (max-width: 768px) {
-  .banner-container { height: 300px; } /* Giảm chiều cao cho mobile */
-}
-
-@media (max-width: 480px) {
-  .banner-container { height: 220px; } /* Giảm chiều cao cho điện thoại nhỏ */
-}
-</style>
