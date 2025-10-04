@@ -9,7 +9,7 @@
 
 <style>
 /* RESET & BASE */
-* {margin:0;padding:0;box-sizing:border-box;}
+* {margin:0; padding:0; box-sizing:border-box;}
 body {font-family: Arial, sans-serif; line-height:1.6; color:#333;}
 a {text-decoration:none; color:inherit;}
 img {max-width:100%; height:auto; display:block;}
@@ -17,16 +17,14 @@ img {max-width:100%; height:auto; display:block;}
 /* PARALLAX BANNER */
 .banner-container {
     position: relative;
-    overflow: hidden;
-    height: 400px;
-}
-.banner-container img {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
-    transform: translateZ(0);
-    will-change: transform;
-    transition: transform 0.3s ease-out;
+    height: 50vh;
+    min-height: 250px;
+    background-image: url('http://rentbikehanoi.com/wp-content/uploads/2025/10/cropped-Banner-thue-xe-may.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Parallax on desktop */
 }
 
 /* Menu */
@@ -82,6 +80,7 @@ h2 {color:#ff6600; margin:20px 0 10px 0; text-align:center; opacity:0; transform
 @media(max-width:768px){
     h1 {font-size:1.5rem;}
     .menu a {margin:5px 10px; font-size:14px;}
+    .banner-container {height:35vh; background-attachment: scroll;} /* Mobile không dùng fixed */
 }
 </style>
 
@@ -119,9 +118,7 @@ h2 {color:#ff6600; margin:20px 0 10px 0; text-align:center; opacity:0; transform
 <body>
 
 <!-- Parallax Banner -->
-<div class="banner-container">
-<img src="http://rentbikehanoi.com/wp-content/uploads/2025/10/cropped-Banner-thue-xe-may.jpeg" alt="Nguyen Ha Motorbike Rental" class="banner">
-</div>
+<div class="banner-container"></div>
 
 <!-- Menu -->
 <div class="menu">
@@ -156,7 +153,6 @@ h2 {color:#ff6600; margin:20px 0 10px 0; text-align:center; opacity:0; transform
 <a href="https://share.google/Vvo8NjM9ExBke9ae8">View Local Map</a>
 <a href="http://rentbikehanoi.com">Visit Website</a>
 </div>
-
 </div>
 
 <!-- Contact -->
@@ -167,12 +163,8 @@ h2 {color:#ff6600; margin:20px 0 10px 0; text-align:center; opacity:0; transform
 </div>
 
 <script>
-// PARALLAX EFFECT
+// SCROLL REVEAL
 window.addEventListener('scroll', function() {
-  const banner = document.querySelector('.banner-container img');
-  banner.style.transform = 'translateY(' + window.scrollY * 0.5 + 'px)';
-  
-  // Scroll reveal text
   document.querySelectorAll('h1, h2, .content p, .cta-buttons').forEach(el=>{
     const rect = el.getBoundingClientRect();
     if(rect.top < window.innerHeight - 50){
