@@ -4,34 +4,45 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+  <!-- Home -->
+  <url>
+    <loc>https://motorbikenguyenha.github.io/en/</loc>
+    <lastmod>2025-10-07T08:30:37+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
 
-<url>
-  <loc>https://motorbikenguyenha.github.io/en/</loc>
-  <lastmod>2025-10-07T08:30:37+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://motorbikenguyenha.github.io/en/about.html</loc>
-  <lastmod>2025-10-07T08:30:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://motorbikenguyenha.github.io/en/service.html</loc>
-  <lastmod>2025-10-07T08:30:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://motorbikenguyenha.github.io/en/faq.html</loc>
-  <lastmod>2025-10-07T08:30:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://motorbikenguyenha.github.io/en/contact.html</loc>
-  <lastmod>2025-10-07T08:30:37+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+  <!-- About -->
+  <url>
+    <loc>https://motorbikenguyenha.github.io/en/about.html</loc>
+    <lastmod>2025-10-07T08:30:37+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
 
+  <!-- Service -->
+  <url>
+    <loc>https://motorbikenguyenha.github.io/en/service.html</loc>
+    <lastmod>2025-10-07T08:30:37+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://motorbikenguyenha.github.io/en/faq.html</loc>
+    <lastmod>2025-10-07T08:30:37+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://motorbikenguyenha.github.io/en/contact.html</loc>
+    <lastmod>2025-10-07T08:30:37+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
 
 </urlset>
