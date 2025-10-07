@@ -32,7 +32,7 @@
   <meta name="twitter:description" content="Motorbike rentals in Hanoi — scooters, automatic bikes and motorcycles. Fast booking via WhatsApp & Zalo." />
   <meta name="twitter:image" content="http://rentbikehanoi.com/wp-content/uploads/2025/10/Banner-Motorcycle-Rental-Hanoi.png" />
 
-  <!-- Sitemap (create /en/sitemap.xml on repo root) -->
+  <!-- Sitemap link (create /en/sitemap.xml on repo root) -->
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/en/sitemap.xml" />
 
   <!-- Fonts -->
@@ -40,7 +40,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Structured Data: LocalBusiness, Organization, Breadcrumb, Products, FAQ, Reviews -->
+  <!-- JSON-LD: LocalBusiness, Breadcrumb, FAQ, Reviews, Products -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -51,19 +51,7 @@
         "name":"Nguyen Ha Motorbike Rental",
         "url":"https://motorbikenguyenha.github.io/en/",
         "logo":"https://motorbikenguyenha.github.io/en/images/logo.jpg",
-        "sameAs":[
-          "https://m.facebook.com/motorbikethuha/",
-          "https://rentbikehanoi.com",
-          "https://wa.me/84334699969",
-          "https://zalo.me/0334699969"
-        ],
-        "contactPoint":{
-          "@type":"ContactPoint",
-          "telephone":"+84334699969",
-          "contactType":"Customer Service",
-          "areaServed":"VN",
-          "availableLanguage":["English","Vietnamese"]
-        }
+        "sameAs":["https://m.facebook.com/motorbikethuha/","https://rentbikehanoi.com","https://wa.me/84334699969","https://zalo.me/0334699969"]
       },
       {
         "@type":"LocalBusiness",
@@ -81,18 +69,10 @@
           "postalCode":"100000",
           "addressCountry":"VN"
         },
-        "geo":{
-          "@type":"GeoCoordinates",
-          "latitude":21.0409522,
-          "longitude":105.8691200
-        },
+        "geo":{"@type":"GeoCoordinates","latitude":21.0409522,"longitude":105.8691200},
         "openingHours":"Mo-Su 08:00-17:00",
         "priceRange":"$5–$6",
-        "aggregateRating":{
-          "@type":"AggregateRating",
-          "ratingValue":"4.8",
-          "reviewCount":"5"
-        }
+        "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"5"}
       },
       {
         "@type":"BreadcrumbList",
@@ -101,7 +81,7 @@
           {"@type":"ListItem","position":1,"name":"Home","item":"https://motorbikenguyenha.github.io/en/"},
           {"@type":"ListItem","position":2,"name":"About","item":"https://motorbikenguyenha.github.io/en/about.html"},
           {"@type":"ListItem","position":3,"name":"Service","item":"https://motorbikenguyenha.github.io/en/service.html"},
-          {"@type":"ListItem","position":4,"name":"Contract","item":"https://motorbikenguyenha.github.io/en/contract.html"}
+          {"@type":"ListItem","position":4,"name":"Contact","item":"https://motorbikenguyenha.github.io/en/contact.html"}
         ]
       },
       {
@@ -115,11 +95,11 @@
           {"@type":"Question","name":"Are long-term discounts available?","acceptedAnswer":{"@type":"Answer","text":"Yes — weekly and monthly rentals have discounted rates. Contact us for a tailored quote."}}
         ]
       },
-      {"@type":"Review","@id":"https://motorbikenguyenha.github.io/en/#r1","itemReviewed":{"@type":"LocalBusiness","name":"Nguyen Ha Motorbike Rental"},"author":{"@type":"Person","name":"Linh"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Great bikes and service, highly recommended!","datePublished":"2025-09-15"},
-      {"@type":"Review","@id":"https://motorbikenguyenha.github.io/en/#r2","itemReviewed":{"@type":"LocalBusiness","name":"Nguyen Ha Motorbike Rental"},"author":{"@type":"Person","name":"Huy"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Fast delivery and excellent customer support.","datePublished":"2025-09-20"},
-      {"@type":"Review","@id":"https://motorbikenguyenha.github.io/en/#r3","itemReviewed":{"@type":"LocalBusiness","name":"Nguyen Ha Motorbike Rental"},"author":{"@type":"Person","name":"Mai"},"reviewRating":{"@type":"Rating","ratingValue":"4","bestRating":"5"},"reviewBody":"Clean bikes and easy booking via WhatsApp.","datePublished":"2025-09-25"},
-      {"@type":"Review","@id":"https://motorbikenguyenha.github.io/en/#r4","itemReviewed":{"@type":"LocalBusiness","name":"Nguyen Ha Motorbike Rental"},"author":{"@type":"Person","name":"Tom"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Friendly staff and helpful route tips.","datePublished":"2025-10-01"},
-      {"@type":"Review","@id":"https://motorbikenguyenha.github.io/en/#r5","itemReviewed":{"@type":"LocalBusiness","name":"Nguyen Ha Motorbike Rental"},"author":{"@type":"Person","name":"Anna"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Great long-term rental options, highly recommended.","datePublished":"2025-10-03"}
+      {"@type":"Review","@id":"https://motorbikenguyenha.github.io/en/#r1","itemReviewed":{"@type":"LocalBusiness","name":"Nguyen Ha Motorbike Rental"},"author":{"@type":"Person","name":"Linh"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Great bikes and service, highly recommended!","datePublished":"2025-09-15"},
+      {"@type":"Review","@id":"https://motorbikenguyenha.github.io/en/#r2","itemReviewed":{"@type":"LocalBusiness","name":"Nguyen Ha Motorbike Rental"},"author":{"@type":"Person","name":"Huy"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Fast delivery and excellent customer support.","datePublished":"2025-09-20"},
+      {"@type":"Review","@id":"https://motorbikenguyenha.github.io/en/#r3","itemReviewed":{"@type":"LocalBusiness","name":"Nguyen Ha Motorbike Rental"},"author":{"@type":"Person","name":"Mai"},"reviewRating":{"@type":"Rating","ratingValue":"4"},"reviewBody":"Clean bikes and easy booking via WhatsApp.","datePublished":"2025-09-25"},
+      {"@type":"Review","@id":"https://motorbikenguyenha.github.io/en/#r4","itemReviewed":{"@type":"LocalBusiness","name":"Nguyen Ha Motorbike Rental"},"author":{"@type":"Person","name":"Tom"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Friendly staff and helpful route tips.","datePublished":"2025-10-01"},
+      {"@type":"Review","@id":"https://motorbikenguyenha.github.io/en/#r5","itemReviewed":{"@type":"LocalBusiness","name":"Nguyen Ha Motorbike Rental"},"author":{"@type":"Person","name":"Anna"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Great long-term rental options, highly recommended.","datePublished":"2025-10-03"}
     ]
   }
   </script>
@@ -151,7 +131,7 @@
 
     .cta{background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;font-weight:700}
 
-    /* Mobile menu (drawer from right) */
+    /* Mobile drawer */
     .hamburger{display:none;cursor:pointer}
     .hamburger span{display:block;width:22px;height:2px;background:#111;margin:4px 0;border-radius:2px}
     @media(max-width:880px){
@@ -238,7 +218,7 @@
       </div>
 
       <div style="display:flex;align-items:center;gap:14px">
-        <!-- contact small icons in header -->
+        <!-- header contact icons -->
         <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)">
           <a href="mailto:motorbikenguyenha@gmail.com" aria-label="Email" title="Email">📧</a>
           <a href="https://m.facebook.com/motorbikethuha/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">🔵</a>
@@ -250,7 +230,7 @@
             <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
             <a href="service.html">Service</a>
-            <a href="contract.html">Contract</a>
+            <a href="contact.html">Contact</a>
           </div>
 
           <div class="hamburger" id="hamburger" role="button" aria-label="Open menu" tabindex="0">
@@ -265,7 +245,7 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="service.html">Service</a>
-      <a href="contract.html">Contract</a>
+      <a href="contact.html">Contact</a>
       <div style="margin-top:12px"><a href="mailto:motorbikenguyenha@gmail.com" style="display:inline-block;padding:10px 12px;background:#f4f4f4;border-radius:8px">Email</a></div>
       <div style="margin-top:12px"><a href="https://m.facebook.com/motorbikethuha/" target="_blank" rel="noopener" style="display:inline-block;padding:10px 12px;background:#f4f4f4;border-radius:8px">Facebook</a></div>
       <div style="margin-top:12px"><a href="https://wa.me/84334699969" class="cta">Book via WhatsApp</a></div>
@@ -387,13 +367,40 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer role="contentinfo">
+  <!-- Footer (icons included) -->
+  <footer role="contentinfo" style="background:#0f1724;color:#fff;padding:28px 0;margin-top:36px;text-align:center">
     <div class="container">
-      <p style="margin:6px 0">© 2025 Nguyen Ha Motorbike Rental</p>
-      <p style="margin:6px 0">No 24, Alley 5, Nguyen Van Cu St, Long Bien Dist, Hanoi, Vietnam</p>
-      <p style="margin:6px 0">Email: <a href="mailto:motorbikenguyenha@gmail.com">motorbikenguyenha@gmail.com</a> • <a href="https://m.facebook.com/motorbikethuha/" target="_blank" rel="noopener">Facebook</a></p>
-      <p style="margin:6px 0"><a href="about.html">About</a> • <a href="service.html">Service</a> • <a href="contract.html">Contract</a></p>
+      <h3 style="margin:0 0 10px;font-size:18px">Nguyen Ha Motorbike Rental</h3>
+
+      <p style="margin:8px 0;display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap">
+        <!-- Map Pin -->
+        <svg width="18" height="18" fill="#ff6600" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+        No 24, Alley 5, Nguyen Van Cu St, Long Bien Dist, Hanoi, Vietnam
+      </p>
+
+      <p style="margin:8px 0;display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap">
+        <!-- Email Icon -->
+        <svg width="18" height="18" fill="#ff6600" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 13.065L.015 6.75 0 19.5h24V6.75l-12 6.315zM12 10.5l12-6H0l12 6z"/></svg>
+        <a href="mailto:motorbikenguyenha@gmail.com" style="color:#ffd9b8;text-decoration:none">motorbikenguyenha@gmail.com</a>
+      </p>
+
+      <p style="margin:8px 0;display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap">
+        <!-- Clock Icon -->
+        <svg width="18" height="18" fill="#ff6600" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.75a10.25 10.25 0 1 0 0 20.5 10.25 10.25 0 0 0 0-20.5zm.75 10.25V6.5h-1.5v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        Opening hours: 08:00 - 17:00 (Mon - Sun)
+      </p>
+
+      <p style="margin:12px 0">
+        <a href="index.html" style="color:#ffd9b8;text-decoration:none;margin:0 6px">Home</a> •
+        <a href="about.html" style="color:#ffd9b8;text-decoration:none;margin:0 6px">About</a> •
+        <a href="service.html" style="color:#ffd9b8;text-decoration:none;margin:0 6px">Service</a> •
+        <a href="contact.html" style="color:#ffd9b8;text-decoration:none;margin:0 6px">Contact</a>
+      </p>
+
+      <p style="margin:10px 0;font-size:14px;color:#ffd9b8">
+        © 2025 Nguyen Ha Motorbike Rental •
+        <a href="https://rentbikehanoi.com" target="_blank" rel="noopener" style="color:#ffd9b8;text-decoration:underline">Hanoi Motorbike Rental</a>
+      </p>
     </div>
   </footer>
 
@@ -480,11 +487,8 @@
   </script>
 
   <!-- Helpful: create these files and upload to repo root:
-    /en/sitemap.xml (sample in earlier message)
-    /robots.txt:
-      User-agent: *
-      Allow: /
-      Sitemap: https://motorbikenguyenha.github.io/en/sitemap.xml
+    /en/sitemap.xml (sample below)
+    /robots.txt (sample below)
   -->
 
 </body>
