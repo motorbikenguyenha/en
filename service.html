@@ -6,128 +6,102 @@
   <title>Motorbike Rental Prices in Hanoi | Nguyen Ha</title>
   <meta name="description" content="Check daily, weekly, and monthly motorbike rental prices in Hanoi. Affordable, reliable service from Nguyen Ha Motorbike Rental.">
   <meta name="keywords" content="Hanoi motorbike rental prices, Motorcycle rental Hanoi, Motorbike Hire Hanoi, Nguyen Ha rental">
+  <link rel="canonical" href="https://motorbikenguyenha.github.io/en/service.html" />
 
-  <!-- Geo Tags -->
-  <meta name="geo.region" content="VN-HN">
-  <meta name="geo.placename" content="Hanoi">
-  <meta name="geo.position" content="21.0409522;105.8691200">
-  <meta name="ICBM" content="21.0409522, 105.8691200">
+  <!-- OG / Twitter -->
+  <meta property="og:title" content="Motorbike Rental Prices in Hanoi | Nguyen Ha" />
+  <meta property="og:description" content="Daily, weekly, monthly prices for motorbike rental in Hanoi. Book your bike today." />
+  <meta property="og:image" content="http://rentbikehanoi.com/wp-content/uploads/2025/10/Banner-Motorcycle-Rental-Hanoi.png" />
+  <meta property="og:url" content="https://motorbikenguyenha.github.io/en/service.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Motorbike Rental Prices in Hanoi | Nguyen Ha">
-  <meta property="og:description" content="Daily, weekly, monthly prices for motorbike rental in Hanoi. Book your bike today.">
-  <meta property="og:image" content="http://rentbikehanoi.com/wp-content/uploads/2025/10/Banner-Motorcycle-Rental-Hanoi.png">
-  <meta property="og:url" content="https://motorbikenguyenha.github.io/en/service.html">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Motorbike Rental Prices in Hanoi | Nguyen Ha">
-  <meta name="twitter:description" content="Daily, weekly, monthly prices for motorbike rental in Hanoi. Book your bike today.">
-  <meta name="twitter:image" content="http://rentbikehanoi.com/wp-content/uploads/2025/10/Banner-Motorcycle-Rental-Hanoi.png">
-
-  <link rel="canonical" href="https://motorbikenguyenha.github.io/en/service.html">
-
+  <!-- Styles -->
   <style>
-    body {font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; color:#333;}
-    header {background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000;}
-    nav ul {display:flex; justify-content:center; list-style:none; padding:10px; margin:0;}
-    nav ul li {margin:0 10px;}
-    nav ul li a {text-decoration:none; color:#333; font-weight:bold; transition:0.3s;}
-    nav ul li a:hover {color:#ff6600;}
+    :root{--accent:#ff6600;--muted:#6b6b6b;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial}
+    body{margin:0;color:#222;background:#fff;line-height:1.45}
+    header{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;z-index:1200}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand img{width:56px;height:56px;border-radius:10px;object-fit:cover}
+    .menu{display:flex;gap:14px}
+    .menu a{padding:8px 12px;border-radius:8px;font-weight:600;color:inherit;text-decoration:none;position:relative}
+    .menu a::after{content:"";display:block;height:2px;background:var(--accent);width:0;transition:width .22s}
+    .menu a:hover::after,.menu a.active::after{width:100%}
 
-    .banner {
-      background:url('http://rentbikehanoi.com/wp-content/uploads/2025/10/Banner-Motorcycle-Rental-Hanoi.png') center/cover no-repeat;
-      height:35vh; min-height:200px;
-    }
+    .banner{background:url('http://rentbikehanoi.com/wp-content/uploads/2025/10/Banner-Motorcycle-Rental-Hanoi.png') center/cover no-repeat;height:35vh;min-height:200px}
 
     /* Breadcrumb */
-    .breadcrumb {
-      max-width:1200px;
-      margin:15px auto;
-      padding:0 20px;
-      font-size:14px;
-      color:#666;
-    }
-    .breadcrumb a {
-      color:#ff6600;
-      text-decoration:none;
-    }
-    .breadcrumb a:hover {
-      text-decoration:underline;
-    }
+    .breadcrumb{max-width:1100px;margin:15px auto;padding:0 20px;font-size:14px;color:#666}
+    .breadcrumb a{color:var(--accent);text-decoration:none}
+    .breadcrumb a:hover{text-decoration:underline}
 
-    .content {max-width:1200px; margin:20px auto; padding:0 20px;}
-    h1 {text-align:center; margin-bottom:20px;}
-    table {
-      width:100%; border-collapse:collapse; margin:20px 0;
-    }
-    table th, table td {
-      border:1px solid #ddd; padding:10px; text-align:center;
-    }
-    table th {
-      background:#ff6600; color:#fff;
-    }
-    table tr:nth-child(even) {background:#f9f9f9;}
+    h1,h2{text-align:center;margin-top:20px}
+    table{width:100%;border-collapse:collapse;margin:20px 0}
+    th,td{border:1px solid #ddd;padding:10px;text-align:center}
+    th{background:var(--accent);color:#fff}
+    tr:nth-child(even){background:#f9f9f9}
 
     /* FAQ */
-    .faq-item {border-bottom:1px solid #ddd; padding:10px 0;}
-    .faq-question {cursor:pointer; font-weight:bold; position:relative; padding-right:20px;}
-    .faq-answer {display:none; margin-top:8px;}
-    .faq-question::after {content:'+'; position:absolute; right:0;}
-    .faq-item.active .faq-answer {display:block;}
-    .faq-item.active .faq-question::after {content:'-';}
+    .faq{max-width:800px;margin:20px auto}
+    .faq-item{border-bottom:1px solid #ddd;padding:10px 0}
+    .faq-question{cursor:pointer;font-weight:600;position:relative;padding-right:20px}
+    .faq-question::after{content:'+';position:absolute;right:0}
+    .faq-item.active .faq-question::after{content:'-'}
+    .faq-answer{display:none;margin-top:8px;color:var(--muted)}
+    .faq-item.active .faq-answer{display:block}
+
+    /* Floating buttons */
+    .floating{position:fixed;right:14px;bottom:14px;display:flex;flex-direction:column;gap:10px;z-index:9999}
+    .floating a{width:52px;height:52px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;font-weight:700;box-shadow:0 8px 22px rgba(0,0,0,.12)}
+    .floating a.call{background:#28A745}
+    .floating a.wa{background:#25D366}
+    .floating a.zalo{background:#2D9CDB}
+    .floating a.map{background:#FF6B6B}
 
     /* Footer */
-    footer {background:#333; color:#fff; text-align:center; padding:20px 10px; margin-top:40px;}
-    footer a {color:#ff6600; text-decoration:none; margin:0 5px;}
-    footer a:hover {text-decoration:underline;}
-    .footer-icons {margin:10px 0;}
-    .footer-icons a {display:inline-block; margin:0 5px; font-size:18px;}
+    footer{background:#0f1724;color:#fff;padding:28px 20px;text-align:center;margin-top:40px}
+    footer a{color:#ffd9b8;text-decoration:none}
 
-    /* Back to top */
-    #backToTop {
-      position:fixed; bottom:30px; right:20px;
-      background:#ff6600; color:#fff; padding:10px 15px;
-      border-radius:50%; cursor:pointer;
-      display:none; font-weight:bold;
-    }
-
-    /* Scroll effect */
-    .fade-in {opacity:0; transform:translateY(20px); transition:opacity .8s, transform .8s;}
-    .fade-in.visible {opacity:1; transform:translateY(0);}
+    /* Fade */
+    .fade-in{opacity:0;transform:translateY(20px);transition:opacity .8s,transform .8s}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
   </style>
 </head>
 <body>
 
-<header>
-  <nav aria-label="Primary menu">
-    <ul>
-      <li><a href="https://motorbikenguyenha.github.io/en/">Home</a></li>
-      <li><a href="https://motorbikenguyenha.github.io/en/about.html">About</a></li>
-      <li><a href="https://motorbikenguyenha.github.io/en/service.html" class="active">Service</a></li>
-      <li><a href="https://motorbikenguyenha.github.io/en/contact.html">Contact</a></li>
-    </ul>
-  </nav>
+<header class="container">
+  <div class="nav" role="navigation" aria-label="Main">
+    <div class="brand">
+      <img src="http://rentbikehanoi.com/wp-content/uploads/2025/10/Banner-Motorcycle-Rental-Hanoi.png" alt="Nguyen Ha Motorbike Rental logo">
+      <div>
+        <div style="font-weight:700;font-size:15px">Hanoi Motorbike Rental - Nguyen Ha</div>
+        <div style="font-size:12px;color:var(--muted)">Motorcycle Rental In Hanoi</div>
+      </div>
+    </div>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="service.html" class="active">Service</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
 
 <div class="banner"></div>
 
-<!-- Breadcrumb -->
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <a href="https://motorbikenguyenha.github.io/en/">Home</a> › <span>Service</span>
 </nav>
 
-<div class="content">
+<main class="container">
   <h1>Motorbike Rental Service & Prices in Hanoi</h1>
 
-  <h2>Daily & Weekly Prices</h2>
+  <h2>Daily / Weekly / Monthly Prices</h2>
   <table class="fade-in">
     <thead>
-      <tr>
-        <th>Duration</th>
-        <th>Price Range (VND)</th>
-      </tr>
+      <tr><th>Duration</th><th>Price Range (VND)</th></tr>
     </thead>
     <tbody>
       <tr><td>1 Day</td><td>150,000 – 200,000</td></tr>
@@ -140,9 +114,6 @@
     </tbody>
   </table>
 
-  <h2>Rental Procedure</h2>
-  <p>✔ Passport with valid Vietnam visa required for deposit — OR cash deposit between 2,000,000–5,000,000 VND plus payment in advance.</p>
-
   <h2>Frequently Asked Questions</h2>
   <div class="faq">
     <div class="faq-item">
@@ -153,40 +124,52 @@
       <div class="faq-question">Can I rent a 50cc scooter without a license?</div>
       <div class="faq-answer">Yes, 50cc scooters are available for rent and can be used without a driving license. This is ideal for short city rides.</div>
     </div>
+    <div class="faq-item">
+      <div class="faq-question">What is the rental procedure?</div>
+      <div class="faq-answer">Passport with valid Vietnam visa required for deposit — OR cash deposit between 2,000,000–5,000,000 VND plus payment in advance.</div>
+    </div>
   </div>
+</main>
+
+<!-- Floating contact buttons -->
+<div class="floating">
+  <a class="call" href="tel:+84334699969" title="Call">📞</a>
+  <a class="wa" href="https://wa.me/84334699969" title="WhatsApp">WA</a>
+  <a class="zalo" href="https://zalo.me/0334699969" title="Zalo">Z</a>
+  <a class="map" href="https://maps.app.goo.gl/M6kfsn1ZHZJR4GRr6?g_st=ic" target="_blank" title="Map">📍</a>
 </div>
 
 <footer>
-  <div class="footer-icons">
-    <a href="mailto:Motorbikenguyenha@gmail.com">📧</a>
-    <a href="https://wa.me/84334699969">💬</a>
-    <a href="https://zalo.me/0334699969">📱</a>
-    <a href="https://maps.app.goo.gl/M6kfsn1ZHZJR4GRr6?g_st=ic">📍</a>
+  <div class="container">
+    <h3 style="margin:0 0 10px">Nguyen Ha Motorbike Rental</h3>
+    <p style="margin:8px 0;display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap">
+      📍 No 24, Alley 5, Nguyen Van Cu St, Long Bien Dist, Hanoi, Vietnam
+    </p>
+    <p style="margin:8px 0;display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap">
+      ✉ <a href="mailto:Motorbikenguyenha@gmail.com">Motorbikenguyenha@gmail.com</a>
+    </p>
+    <p style="margin:8px 0;display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap">
+      ⏰ Opening hours: 08:00 - 17:00 (Mon - Sun)
+    </p>
+    <p>
+      <a href="index.html">Home</a> • <a href="about.html">About</a> • <a href="service.html">Service</a> • <a href="contact.html">Contact</a>
+    </p>
+    <p style="font-size:14px;color:#ffd9b8">© 2025 Nguyen Ha Motorbike Rental • <a href="https://rentbikehanoi.com" target="_blank">Hanoi Motorbike Rental</a></p>
   </div>
-  <p>📍 Long Bien, Hanoi — ⏰ 08:00 - 17:00 — ✉ Motorbikenguyenha@gmail.com</p>
-  <p>© 2025 Nguyen Ha Motorbike Rental</p>
 </footer>
 
-<div id="backToTop">↑</div>
-
 <script>
+  // Fade in
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
+  },{threshold:0.18});
+  fadeEls.forEach(el=>io.observe(el));
+
   // FAQ toggle
   document.querySelectorAll('.faq-question').forEach(q=>{
-    q.addEventListener('click', ()=>{
-      q.parentElement.classList.toggle('active');
-    });
+    q.addEventListener('click',()=>q.parentElement.classList.toggle('active'));
   });
-
-  // Back to top
-  const backBtn = document.getElementById('backToTop');
-  window.addEventListener('scroll', ()=>{
-    if(window.scrollY>300){backBtn.style.display='block';}else{backBtn.style.display='none';}
-    document.querySelectorAll('.fade-in').forEach(el=>{
-      const rect = el.getBoundingClientRect();
-      if(rect.top < window.innerHeight - 50) el.classList.add('visible');
-    });
-  });
-  backBtn.addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
 </script>
 
 <!-- Breadcrumb Schema -->
@@ -210,18 +193,17 @@
     {
       "@type": "Question",
       "name": "Do I need a driving license to rent a motorbike in Hanoi?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, an international driving permit or a valid local license is required for bikes above 50cc. For 50cc scooters, no license is needed."
-      }
+      "acceptedAnswer": {"@type": "Answer","text": "Yes, an international driving permit or a valid local license is required for bikes above 50cc. For 50cc scooters, no license is needed."}
     },
     {
       "@type": "Question",
       "name": "Can I rent a 50cc scooter without a license?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, 50cc scooters are available for rent and can be used without a driving license. This is ideal for short city rides."
-      }
+      "acceptedAnswer": {"@type": "Answer","text": "Yes, 50cc scooters are available for rent and can be used without a driving license. This is ideal for short city rides."}
+    },
+    {
+      "@type": "Question",
+      "name": "What is the rental procedure?",
+      "acceptedAnswer": {"@type": "Answer","text": "Passport with valid Vietnam visa required for deposit — OR cash deposit between 2,000,000–5,000,000 VND plus payment in advance."}
     }
   ]
 }
