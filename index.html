@@ -40,7 +40,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <!-- JSON-LD: LocalBusiness, Breadcrumb, FAQ, Reviews, Products -->
+  <!-- JSON-LD: Organization, LocalBusiness, Breadcrumb, FAQ, Reviews -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -70,7 +70,9 @@
           "addressCountry":"VN"
         },
         "geo":{"@type":"GeoCoordinates","latitude":21.0409522,"longitude":105.8691200},
-        "openingHours":"Mo-Su 08:00-17:00",
+        "openingHoursSpecification":[
+          {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"17:00"}
+        ],
         "priceRange":"$5–$6",
         "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"5"}
       },
@@ -81,12 +83,13 @@
           {"@type":"ListItem","position":1,"name":"Home","item":"https://motorbikenguyenha.github.io/en/"},
           {"@type":"ListItem","position":2,"name":"About","item":"https://motorbikenguyenha.github.io/en/about.html"},
           {"@type":"ListItem","position":3,"name":"Service","item":"https://motorbikenguyenha.github.io/en/service.html"},
-          {"@type":"ListItem","position":4,"name":"Contact","item":"https://motorbikenguyenha.github.io/en/contact.html"}
+          {"@type":"ListItem","position":4,"name":"FAQ","item":"https://motorbikenguyenha.github.io/en/faq.html"},
+          {"@type":"ListItem","position":5,"name":"Contact","item":"https://motorbikenguyenha.github.io/en/contact.html"}
         ]
       },
       {
         "@type":"FAQPage",
-        "@id":"https://motorbikenguyenha.github.io/en/#faq",
+        "@id":"https://motorbikenguyenha.github.io/en/#faq-home",
         "mainEntity":[
           {"@type":"Question","name":"Do I need a driving license in Hanoi?","acceptedAnswer":{"@type":"Answer","text":"You can often ride 50cc scooters locally without an international license; for larger motorbikes a valid international or Vietnamese driving license is recommended."}},
           {"@type":"Question","name":"Can you deliver the motorbike to my hotel?","acceptedAnswer":{"@type":"Answer","text":"Yes — we deliver & pick up within Hanoi. Delivery fees may apply for outer districts."}},
@@ -125,7 +128,7 @@
     .brand p{margin:0;font-size:12px;color:var(--muted)}
 
     .menu{display:flex;gap:14px;align-items:center}
-    .menu a{padding:8px 12px;border-radius:8px;font-weight:600}
+    .menu a{padding:8px 12px;border-radius:8px;font-weight:600;text-decoration:none;color:#111}
     .menu a::after{content:"";display:block;height:2px;background:var(--accent);width:0;transition:width .25s}
     .menu a:hover::after, .menu a.active::after{width:100%}
 
@@ -144,8 +147,8 @@
 
     /* Hero */
     .hero{margin:18px auto;max-width:var(--maxw);padding:0 20px}
-    .hero .top{display:flex;justify-content:space-between;align-items:center;gap:12px}
-    .hero .banner{height:50vh;min-height:260px;border-radius:12px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.08);
+    .hero .top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+    .hero .banner{height:50vh;min-height:220px;border-radius:12px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.08);
       background-image:url('http://rentbikehanoi.com/wp-content/uploads/2025/10/Banner-Motorcycle-Rental-Hanoi.png');
       background-size:cover;background-position:center center;
     }
@@ -227,11 +230,11 @@
 
         <nav aria-label="Primary menu">
           <div class="menu" id="desktopMenu">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="service.html">Service</a>
-            <a href=faq.html">Faq</a>
-            <a href="contact.html">Contact</a>
+            <a href="/en/" class="active">Home</a>
+            <a href="/en/about.html">About</a>
+            <a href="/en/service.html">Service</a>
+            <a href="/en/faq.html">FAQ</a>
+            <a href="/en/contact.html">Contact</a>
           </div>
 
           <div class="hamburger" id="hamburger" role="button" aria-label="Open menu" tabindex="0">
@@ -243,29 +246,36 @@
 
     <!-- Mobile drawer -->
     <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="service.html">Service</a>
-      <a href="contact.html">Contact</a>
+      <a href="/en/">Home</a>
+      <a href="/en/about.html">About</a>
+      <a href="/en/service.html">Service</a>
+      <a href="/en/faq.html">FAQ</a>
+      <a href="/en/contact.html">Contact</a>
       <div style="margin-top:12px"><a href="mailto:motorbikenguyenha@gmail.com" style="display:inline-block;padding:10px 12px;background:#f4f4f4;border-radius:8px">Email</a></div>
       <div style="margin-top:12px"><a href="https://m.facebook.com/motorbikethuha/" target="_blank" rel="noopener" style="display:inline-block;padding:10px 12px;background:#f4f4f4;border-radius:8px">Facebook</a></div>
       <div style="margin-top:12px"><a href="https://wa.me/84334699969" class="cta">Book via WhatsApp</a></div>
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO / Intro -->
   <main id="main">
     <section class="hero container" aria-labelledby="hero-title" style="padding-top:18px">
       <div class="top">
         <div>
-          <h1 id="hero-title" style="margin-bottom:6px">Hanoi Motorbike Rental - Nguyen Ha</h1>
-          <h3 style="margin-top:0;color:var(--muted)">Reliable & affordable motorcycle rental in Hanoi — scooters, automatic bikes and motorbikes for travelers and locals.</h3>
+          <h2 id="hero-title" style="margin-bottom:6px">Hanoi Motorbike Rental - Nguyen Ha</h2>
+          <!-- Short intro (2-3 lines) -->
+          <h3 style="margin-top:0;color:var(--muted)">Reliable & affordable motorcycle rental in Hanoi — scooters, automatic bikes and motorcycles for travelers and locals. Fast booking via WhatsApp, Zalo or email.</h3>
         </div>
       </div>
       <div class="banner" role="img" aria-label="Motorbike rental banner" style="margin-top:12px"></div>
     </section>
 
-    <!-- About -->
+    <!-- Breadcrumb (HTML visible for users) -->
+    <nav class="container breadcrumb" aria-label="Breadcrumb" style="margin-top:14px;color:var(--muted);font-size:14px">
+      <a href="/en/" style="color:var(--accent);text-decoration:none">Home</a> › <span>Home</span>
+    </nav>
+
+    <!-- About (short) -->
     <section id="about" class="container fade-in" style="margin-top:22px;padding-bottom:6px">
       <h2 style="text-align:center;color:var(--accent);margin-bottom:8px">About Nguyen Ha - Motorcycle Rental In Hanoi</h2>
       <h3 style="text-align:center;margin-top:0;color:var(--muted);font-weight:600">Trusted Hanoi motorbike rental service for tourists & locals</h3>
@@ -274,7 +284,7 @@
       </p>
     </section>
 
-    <!-- Products -->
+    <!-- Fleet / Products -->
     <h2 class="section-title fade-in">Our Fleet</h2>
     <section class="products" aria-label="Fleet" role="region">
       <article class="card fade-in" id="product-wave" aria-labelledby="p-wave">
@@ -310,7 +320,18 @@
       </article>
     </section>
 
-    <!-- FAQ -->
+    <!-- Short service CTA -->
+    <section class="container fade-in" style="text-align:center;margin:16px auto;padding:0 20px">
+      <p style="color:var(--muted);max-width:760px;margin:8px auto">
+        Daily, weekly and monthly rentals. Free delivery in central Hanoi. Quick booking via WhatsApp / Zalo — fast replies.
+      </p>
+      <div style="display:flex;gap:10px;justify-content:center;margin-top:12px;flex-wrap:wrap">
+        <a class="cta" href="https://wa.me/84334699969" target="_blank" rel="noopener">WhatsApp +84 334 699 969</a>
+        <a class="cta" href="https://zalo.me/0334699969" style="background:#2D9CDB" target="_blank" rel="noopener">Zalo 0334 699 969</a>
+      </div>
+    </section>
+
+    <!-- FAQ (preview of main questions; full FAQ at /en/faq.html) -->
     <h2 class="section-title fade-in" id="faq-heading">Frequently Asked Questions</h2>
     <section class="faq container" aria-labelledby="faq-heading">
       <div class="faq-item fade-in">
@@ -337,9 +358,11 @@
         <button class="q" aria-expanded="false" aria-controls="f5" id="f5-btn">Are long-term discounts available?</button>
         <div id="f5" class="a" role="region" aria-labelledby="f5-btn"><p>Yes — weekly and monthly rentals have discounted rates. Contact us for a tailored quote.</p></div>
       </div>
+
+      <p style="text-align:center;margin-top:14px;color:var(--muted)">More FAQs & detailed answers on the <a href="/en/faq.html" style="color:var(--accent)">FAQ page</a>.</p>
     </section>
 
-    <!-- Reviews (under FAQ) -->
+    <!-- Reviews -->
     <h2 class="section-title fade-in">Customer Reviews</h2>
     <section class="reviews-wrap fade-in" aria-label="Customer reviews">
       <div class="review-track" id="reviewTrack" style="transform:translateX(0%)">
@@ -358,52 +381,7 @@
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="container" style="text-align:center;margin:26px auto;padding:0 20px">
-      <p style="color:var(--muted);max-width:760px;margin:8px auto">Ready to rent? Quick booking via WhatsApp / Zalo — fast replies. Also check our partner site <a href="https://rentbikehanoi.com" rel="dofollow" target="_blank">Hanoi Motorbike Rental</a>.</p>
-      <div style="display:flex;gap:10px;justify-content:center;margin-top:12px;flex-wrap:wrap">
-        <a class="cta" href="https://wa.me/84334699969">WhatsApp +84 334 699 969</a>
-        <a class="cta" href="https://zalo.me/0334699969" style="background:#2D9CDB">Zalo 0334 699 969</a>
-      </div>
-    </section>
   </main>
-
-  <!-- Footer (icons included) -->
-  <footer role="contentinfo" style="background:#0f1724;color:#fff;padding:28px 0;margin-top:36px;text-align:center">
-    <div class="container">
-      <h3 style="margin:0 0 10px;font-size:18px">Nguyen Ha Motorbike Rental</h3>
-
-      <p style="margin:8px 0;display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap">
-        <!-- Map Pin -->
-        <svg width="18" height="18" fill="#ff6600" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
-        No 24, Alley 5, Nguyen Van Cu St, Long Bien Dist, Hanoi, Vietnam
-      </p>
-
-      <p style="margin:8px 0;display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap">
-        <!-- Email Icon -->
-        <svg width="18" height="18" fill="#ff6600" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 13.065L.015 6.75 0 19.5h24V6.75l-12 6.315zM12 10.5l12-6H0l12 6z"/></svg>
-        <a href="mailto:motorbikenguyenha@gmail.com" style="color:#ffd9b8;text-decoration:none">motorbikenguyenha@gmail.com</a>
-      </p>
-
-      <p style="margin:8px 0;display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap">
-        <!-- Clock Icon -->
-        <svg width="18" height="18" fill="#ff6600" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.75a10.25 10.25 0 1 0 0 20.5 10.25 10.25 0 0 0 0-20.5zm.75 10.25V6.5h-1.5v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-        Opening hours: 08:00 - 17:00 (Mon - Sun)
-      </p>
-
-      <p style="margin:12px 0">
-        <a href="index.html" style="color:#ffd9b8;text-decoration:none;margin:0 6px">Home</a> •
-        <a href="about.html" style="color:#ffd9b8;text-decoration:none;margin:0 6px">About</a> •
-        <a href="service.html" style="color:#ffd9b8;text-decoration:none;margin:0 6px">Service</a> •
-        <a href="contact.html" style="color:#ffd9b8;text-decoration:none;margin:0 6px">Contact</a>
-      </p>
-
-      <p style="margin:10px 0;font-size:14px;color:#ffd9b8">
-        © 2025 Nguyen Ha Motorbike Rental •
-        <a href="https://rentbikehanoi.com" target="_blank" rel="noopener" style="color:#ffd9b8;text-decoration:underline">Hanoi Motorbike Rental</a>
-      </p>
-    </div>
-  </footer>
 
   <!-- Floating contact: Call, WhatsApp, Zalo, Local Map -->
   <div class="floating-contact" aria-hidden="false">
@@ -415,6 +393,41 @@
 
   <!-- Back to top -->
   <button id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- Footer -->
+  <footer role="contentinfo" style="background:#0f1724;color:#fff;padding:28px 0;margin-top:36px;text-align:center">
+    <div class="container">
+      <h3 style="margin:0 0 10px;font-size:18px">Nguyen Ha Motorbike Rental</h3>
+
+      <p style="margin:8px 0;display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap">
+        <svg width="18" height="18" fill="#ff6600" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+        No 24, Alley 5, Nguyen Van Cu St, Long Bien Dist, Hanoi, Vietnam
+      </p>
+
+      <p style="margin:8px 0;display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap">
+        <svg width="18" height="18" fill="#ff6600" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 13.065L.015 6.75 0 19.5h24V6.75l-12 6.315zM12 10.5l12-6H0l12 6z"/></svg>
+        <a href="mailto:motorbikenguyenha@gmail.com" style="color:#ffd9b8;text-decoration:none">motorbikenguyenha@gmail.com</a>
+      </p>
+
+      <p style="margin:8px 0;display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap">
+        <svg width="18" height="18" fill="#ff6600" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.75a10.25 10.25 0 1 0 0 20.5 10.25 10.25 0 0 0 0-20.5zm.75 10.25V6.5h-1.5v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        Opening hours: 08:00 - 17:00 (Mon - Sun)
+      </p>
+
+      <p style="margin:12px 0">
+        <a href="/en/" style="color:#ffd9b8;text-decoration:none;margin:0 6px">Home</a> •
+        <a href="/en/about.html" style="color:#ffd9b8;text-decoration:none;margin:0 6px">About</a> •
+        <a href="/en/service.html" style="color:#ffd9b8;text-decoration:none;margin:0 6px">Service</a> •
+        <a href="/en/faq.html" style="color:#ffd9b8;text-decoration:none;margin:0 6px">FAQ</a> •
+        <a href="/en/contact.html" style="color:#ffd9b8;text-decoration:none;margin:0 6px">Contact</a>
+      </p>
+
+      <p style="margin:10px 0;font-size:14px;color:#ffd9b8">
+        © 2025 Nguyen Ha Motorbike Rental •
+        <a href="https://rentbikehanoi.com" target="_blank" rel="noopener" style="color:#ffd9b8;text-decoration:underline">Hanoi Motorbike Rental</a>
+      </p>
+    </div>
+  </footer>
 
   <!-- Scripts -->
   <script>
@@ -429,7 +442,7 @@
         ham.setAttribute('aria-expanded', String(open));
       };
       ham.addEventListener('click', toggle);
-      ham.addEventListener('keydown', (e)=> { if(e.key==='Enter') toggle(); });
+      ham.addEventListener('keydown', (e)=> { if(e.key==='Enter' || e.key===' ') { e.preventDefault(); toggle(); }});
     })();
 
     // IntersectionObserver fade-in
@@ -488,8 +501,8 @@
   </script>
 
   <!-- Helpful: create these files and upload to repo root:
-    /en/sitemap.xml (sample below)
-    /robots.txt (sample below)
+    /en/sitemap.xml
+    /robots.txt
   -->
 
 </body>
