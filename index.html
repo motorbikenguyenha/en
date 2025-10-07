@@ -2,179 +2,137 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Nguyen Ha Motorbike Rental Hanoi - Motorcycle & Scooter Rentals</title>
+<meta name="description" content="Nguyen Ha Motorbike Rental offers clean, reliable motorcycle and scooter rentals in Hanoi. Free delivery, flexible booking, and travel tips included. Book your Hanoi motorbike rental now!">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://motorbikenguyenha.github.io/en/">
+<meta name="keywords" content="Motorbike Rental Hanoi, Motorcycle Rental Hanoi, Hanoi Motorbike, Nguyen Ha Motorbike Rental">
+<!-- Open Graph / Twitter Card -->
+<meta property="og:title" content="Nguyen Ha Motorbike Rental - Hanoi Motorcycle Rentals">
+<meta property="og:description" content="Thuê xe máy tại Hà Nội với dịch vụ giao nhận miễn phí và hỗ trợ du lịch từ Nguyen Ha Motorbike Rental.">
+<meta property="og:url" content="https://motorbikenguyenha.github.io/en/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://motorbikenguyenha.github.io/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nguyen Ha Motorbike Rental – Hanoi</title>
-<meta name="description" content="Nguyen Ha Motorbike Rental in Hanoi offers clean, well-maintained bikes for daily, weekly, or monthly hire. Free delivery & easy booking available.">
-<meta name="keywords" content="Hanoi motorbike rental, Nguyen Ha, motorbike hire Hanoi, scooter rental, bike delivery Hanoi">
-
 <style>
-/* RESET & BASE */
-* {margin:0; padding:0; box-sizing:border-box;}
-body {font-family: Arial, sans-serif; line-height:1.6; color:#333;}
-a {text-decoration:none; color:inherit;}
-img {max-width:100%; height:auto; display:block;}
-button, a {cursor:pointer;}
-
-/* BANNER TĨNH DƯỚI MENU */
-.banner-container {
-    position: relative;
-    width: 100%;
-    height: 50vh;
-    min-height: 250px;
-    background-image: url('http://rentbikehanoi.com/wp-content/uploads/2025/10/Banner-Motorcycle-Rental-Hanoi.png');
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Parallax trên desktop */
+/* CSS cho slider và nút back-to-top */
+.slider {position: relative; overflow: hidden; width: 100%; max-width: 800px; margin: auto;}
+.slider figure {display: flex; width: 500%; animation: slide 20s infinite;}
+.slider img {width: 20%;}
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  20% { transform: translateX(0%); }
+  25% { transform: translateX(-20%); }
+  45% { transform: translateX(-20%); }
+  50% { transform: translateX(-40%); }
+  70% { transform: translateX(-40%); }
+  75% { transform: translateX(-60%); }
+  95% { transform: translateX(-60%); }
+  100% { transform: translateX(0%); }
 }
-
-/* Menu */
-.menu {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: #f7f7f7;
-    padding: 10px 0;
-    position: sticky;
-    top:0;
-    z-index:1000;
+.back-to-top {
+  position: fixed; bottom: 20px; right: 20px; display: none;
+  padding: 10px 15px; background: #ff6600; color: #fff; border-radius: 50%;
+  font-size: 18px; text-decoration: none; opacity: 0.8;
 }
-.menu a {
-    margin: 0 15px;
-    font-weight:bold;
-    color:#333;
-    transition:0.3s;
-}
-.menu a:hover {color:#ff6600;}
-
-/* Heading */
-h1 {text-align:center; margin:20px 0; font-size:2rem; color:#222; opacity:0; transform:translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease;}
-h2 {color:#ff6600; margin:20px 0 10px 0; text-align:center; opacity:0; transform:translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease;}
-
-/* Content */
-.content {padding:20px; max-width:1200px; margin:0 auto;}
-.content p {margin:10px 0; text-align:justify; opacity:0; transform:translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease;}
-
-/* Buttons CTA */
-.cta-buttons {text-align:center; margin:20px 0; opacity:0; transform:translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease;}
-.cta-buttons a {
-    display:inline-block;
-    margin:5px;
-    padding:12px 25px;
-    background-color:#ff6600;
-    color:#fff;
-    font-weight:bold;
-    border-radius:5px;
-    transition:0.3s;
-}
-.cta-buttons a:hover {background-color:#e65c00;}
-
-/* Contact */
-.contact {
-    background-color:#f0f0f0;
-    padding:20px;
-    text-align:center;
-    font-size:16px;
-}
-
-/* Responsive */
-@media(max-width:768px){
-    h1 {font-size:1.5rem;}
-    .menu a {margin:5px 10px; font-size:14px;}
-    .banner-container {height:35vh; background-attachment: scroll;} /* Mobile không dùng fixed */
-}
+.back-to-top:hover { opacity: 1; }
 </style>
-
-<!-- Schema JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Nguyen Ha Motorbike Rental",
-  "image": "http://rentbikehanoi.com/wp-content/uploads/2025/10/cropped-Banner-thue-xe-may.jpeg",
-  "@id": "http://rentbikehanoi.com",
-  "url": "http://rentbikehanoi.com",
-  "telephone": "+84334699969",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Alley 5, Nguyen Van Cu St",
-    "addressLocality": "Long Bien Dist",
-    "addressRegion": "Hanoi",
-    "postalCode": "100000",
-    "addressCountry": "VN"
-  },
-  "sameAs": [
-    "https://m.facebook.com/motorbikethuha/",
-    "https://share.google/Vvo8NjM9ExBke9ae8",
-    "https://wa.me/84334699969",
-    "https://zalo.me/0334699969"
-  ],
-  "priceRange": "$5–$6",
-  "openingHours": "Mo-Su 08:00-20:00",
-  "description": "Nguyen Ha Motorbike Rental offers clean, well-maintained motorbikes for daily, weekly, or monthly hire in Hanoi. Free delivery and flexible booking available."
-}
-</script>
-
 </head>
-<body>
-
-<!-- Banner -->
-<div class="banner-container"></div>
-
-<!-- Menu -->
-<div class="menu">
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-<a href="https://m.facebook.com/motorbikethuha/">Fanpage</a>
-<a href="https://share.google/Vvo8NjM9ExBke9ae8">Local Map</a>
-<a href="http://rentbikehanoi.com">Website</a>
-</div>
-
-<!-- Content -->
-<div class="content" id="about">
-<h1>Nguyen Ha Motorbike Rental</h1>
-<p>Welcome to Nguyen Ha Motorbike Rental, your trusted motorbike rental service in Hanoi. We provide clean, reliable, and well-maintained motorbikes, scooters, and gear bikes for daily, weekly, or monthly hire. Our services are designed for travelers, expats, and locals who want to explore Hanoi and surrounding countryside comfortably and safely. Enjoy free delivery and pickup, flexible booking, and exceptional customer service.</p>
-
-<h2>Why Choose Us?</h2>
-<p>Nguyen Ha Motorbike Rental stands out for quality, convenience, and affordability. All bikes are regularly serviced and sanitized. Our team is friendly, professional, and ready to help you with navigation tips, routes, and suggestions for your Hanoi adventure. We ensure a seamless rental experience from start to finish.</p>
-
-<h2>Services Offered</h2>
-<p>- Daily, Weekly, Monthly motorbike rentals<br>
-- Delivery & pickup in Hanoi<br>
-- Well-maintained scooters and gear bikes<br>
-- Flexible payment and booking options<br>
-- Travel advice and support for tourists</p>
-
-<!-- CTA Buttons -->
-<div class="cta-buttons">
-<a href="https://wa.me/84334699969">Book Now via WhatsApp</a>
-<a href="https://zalo.me/0334699969">Contact via Zalo</a>
-<a href="https://m.facebook.com/motorbikethuha/">Visit Fanpage</a>
-<a href="https://share.google/Vvo8NjM9ExBke9ae8">View Local Map</a>
-<a href="http://rentbikehanoi.com">Visit Website</a>
-</div>
-</div>
-
-<!-- Contact -->
-<div class="contact" id="contact">
-<p>Address: No 24, Alley 5, Nguyen Van Cu St, Long Bien Dist, Hanoi, Vietnam</p>
-<p>Phone: +84 33 4699969</p>
-<p>Email: motorbikenguyenha@gmail.com</p>
-</div>
-
-<script>
-// SCROLL REVEAL
-window.addEventListener('scroll', function() {
-  document.querySelectorAll('h1, h2, .content p, .cta-buttons').forEach(el=>{
-    const rect = el.getBoundingClientRect();
-    if(rect.top < window.innerHeight - 50){
-      el.style.opacity = 1;
-      el.style.transform = 'translateY(0)';
-    }
-  });
-});
-</script>
-
+<body id="top">
+  <header>
+    <div class="banner-container"></div>
+    <nav class="menu">
+      <ul>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="services.html">Dịch vụ</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+        <li><a href="https://m.facebook.com/motorbikethuha/">Fanpage</a></li>
+        <li><a href="https://share.google/Vvo8NjM9ExBke9ae8">Bản đồ</a></li>
+        <li><a href="http://rentbikehanoi.com">Website</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="content" id="about">
+    <h1>Nguyen Ha Motorbike Rental Hanoi</h1>
+    <p>Welcome to <strong>Nguyen Ha Motorbike Rental</strong> – your reliable choice for <em>Motorbike Rental in Hanoi</em>. We provide clean, well-maintained scooters and gear bikes for daily, weekly, or monthly hire. Enjoy free delivery within Hanoi, flexible booking, and expert travel support for your Hanoi adventure.</p>
+    <h2>Why Choose Nguyen Ha for Hanoi Motorbike Rentals?</h2>
+    <p>We emphasize quality and convenience: all bikes are regularly serviced and sanitized. Our friendly team offers navigation tips and route suggestions around Hanoi. Renting a bike with us is fast, affordable, and customer-focused.</p>
+    <h2>Services Offered</h2>
+    <ul>
+      <li>Daily, Weekly, Monthly rentals of scooters and motorcycles</li>
+      <li>Free delivery & pickup in Hanoi</li>
+      <li>Well-maintained, fully equipped bikes</li>
+      <li>Secure online booking and payment</li>
+      <li>Travel advice and itinerary planning</li>
+    </ul>
+    <!-- Slider Section -->
+    <section id="reviews">
+      <h2>Customer Reviews</h2>
+      <div class="slider">
+        <figure>
+          <img src="https://motorbikenguyenha.github.io/images/review1.jpg" alt="Great service in Hanoi">
+          <img src="https://motorbikenguyenha.github.io/images/review2.jpg" alt="Clean bikes and easy rental">
+          <img src="https://motorbikenguyenha.github.io/images/review3.jpg" alt="Recommended motorbike rental">
+          <img src="https://motorbikenguyenha.github.io/images/review4.jpg" alt="Affordable scooter hire">
+          <img src="https://motorbikenguyenha.github.io/images/review5.jpg" alt="Excellent customer support">
+        </figure>
+      </div>
+    </section>
+    <!-- FAQ Section -->
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>How can I book a motorbike with Nguyen Ha?</summary>
+        <p>You can book quickly via WhatsApp or Zalo using the links above, or fill out our online form. We confirm availability and arrange delivery within Hanoi for you.</p>
+      </details>
+      <details>
+        <summary>What documents do I need to rent a bike?</summary>
+        <p>Simply present your passport (or local ID) and driver's license. We keep a small deposit and return it when you bring back the bike.</p>
+      </details>
+      <details>
+        <summary>Can I ride outside of Hanoi?</summary>
+        <p>Yes, you can take our bikes outside Hanoi (e.g., to Sapa or Halong). Just let us know your itinerary so we can advise on routing.</p>
+      </details>
+      <details>
+        <summary>How is the payment handled?</summary>
+        <p>We accept cash, bank transfers, or payment via ZaloPay/VNPay. Payment is flexible and can be made online or upon pickup/delivery.</p>
+      </details>
+      <details>
+        <summary>Do you offer long-term rentals?</summary>
+        <p>Absolutely. We have affordable weekly and monthly rates. Long-term customers also get priority maintenance and dedicated support.</p>
+      </details>
+    </section>
+    <!-- Contact Call-to-Action -->
+    <div class="cta-buttons">
+      <a href="https://wa.me/84334699969" class="whatsapp">WhatsApp Us</a>
+      <a href="https://zalo.me/0334699969" class="zalo">Liên hệ Zalo</a>
+      <a href="mailto:motorbikenguyenha@gmail.com" class="email">Email Us</a>
+    </div>
+  </main>
+  <footer class="contact" id="contact">
+    <address>
+      <strong>Địa chỉ:</strong> Số 24, Ngõ 5 Nguyễn Văn Cừ, Long Biên, Hà Nội<br>
+      <strong>Điện thoại:</strong> <a href="tel:+84334699969">+84 33 469 9969</a><br>
+      <strong>Email:</strong> <a href="mailto:motorbikenguyenha@gmail.com">motorbikenguyenha@gmail.com</a>
+    </address>
+    <nav>
+      <ul>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="services.html">Dịch vụ</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <p class="author">Bản quyền © 2025 Nguyen Ha Motorbike Rental. Thiết kế bởi <a href="https://motorbikenguyenha.github.io">Nguyen Ha</a>.</p>
+    <a href="#top" class="back-to-top">&#8679;</a>
+  </footer>
+  <script>
+    // Hiển thị nút back-to-top khi scroll
+    window.addEventListener('scroll', function() {
+      var btn = document.querySelector('.back-to-top');
+      if (window.scrollY > 300) btn.style.display = 'block'; 
+      else btn.style.display = 'none';
+    });
+  </script>
 </body>
 </html>
