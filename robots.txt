@@ -1,20 +1,20 @@
 # ---------------------------------------
 # Robots.txt nâng cao - Nguyen Ha Motorbike Rental
-# Dành cho GitHub Pages
+# Dành cho GitHub Pages, tối ưu SEO quốc tế
 # ---------------------------------------
 
-# 1️⃣ Cho phép tất cả bot thân thiện crawl site
+# 1️⃣ Cho phép tất cả bot thân thiện crawl toàn bộ site
 User-agent: *
 Allow: /
 
-# Sitemap để Google & Bing index nhanh
+# Sitemap URL chuẩn quốc tế
 Sitemap: https://motorbikenguyenha.github.io/en/sitemap.xml
 
-# Crawl-delay để tránh server overload
+# Crawl-delay tránh server overload
 Crawl-delay: 10
 
 # ---------------------------------------
-# 2️⃣ Block bot spam / SEO tool không cần thiết
+# 2️⃣ Block bot spam / tool SEO không cần thiết
 # ---------------------------------------
 User-agent: AhrefsBot
 Disallow: /
@@ -38,7 +38,7 @@ User-agent: Baiduspider
 Disallow: /
 
 # ---------------------------------------
-# 3️⃣ Cho phép social bots preview content
+# 3️⃣ Cho phép Social bots preview content (Open Graph, Twitter Card)
 # ---------------------------------------
 User-agent: Twitterbot
 Allow: /
@@ -61,7 +61,7 @@ Disallow: /config/
 Disallow: /scripts/
 
 # ---------------------------------------
-# 5️⃣ Optional: Block query parameters spam (nếu có)
+# 5️⃣ Block query parameters spam (nếu có)
 # ---------------------------------------
 Disallow: /*?utm_source=
 Disallow: /*?ref=
